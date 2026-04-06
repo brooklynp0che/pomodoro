@@ -27,6 +27,12 @@ i, h1 {
     font-size: 3.2rem;
 }
 
+button {
+    justify-content: center;
+    background-color: transparent;
+    color: var(--color-font);
+}
+
 /*content style now*/
 section {
     display: flex;
@@ -84,4 +90,44 @@ section {
     height: 30rem;
     border-radius: 50%;
     background-color: var(--color-secondary);
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 93%;
+    height: 93%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.time {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.time p{
+    font-size: 4rem;
+}
+
+.time p:nth-of-type(2) {
+    position: relative;
+    top: -.5rem;
+    margin-inline: 1rem;
+}
+
+.controls {
+    margin-top: 3rem;
+}
+
+.controls button {
+    border: none;
+    background-color: trasparent;
+    cursor: pointer;
+}
+
+.controls #reset {
+    display: none;
 }
